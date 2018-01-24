@@ -3429,6 +3429,10 @@ iframe{
 	}
 
 }
+/* Custom Styles*/
+.no_padding, .no_padding .fw-col-xs-12{
+	padding: 0 !important;
+}
 .comment-respond button {
 	float: none;
 }

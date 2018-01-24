@@ -40,7 +40,7 @@ if(get_posts()) :
                                 echo "</div><div class=\"row\">";
                                     }
                             ?>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                 <article class="single-from-blog">
                                     <figure>
                                         <a href="<?= $post->guid ?>"><?php echo get_the_post_thumbnail($post->ID); ?></a>
@@ -49,7 +49,7 @@ if(get_posts()) :
                                         <h2><a href="<?=$post->guid?>"><?=$post->post_title?></a></h2>
                                         <p class="blog-admin"><?=date('d M Y', strtotime($post->post_date))?>
                                 <a href="<?=$post->guid ?>" class="com-like"><span class="fa fa-comment-o"></span><?=$post->comment_count?>  Comments</a>
-                                            <a  class="com-like"><span class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></span><span class="like-count"><?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></a>                                        </p>
+                                            <span  class="com-like"><a href="#" class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></a><span class="like-count"> <?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></span>
                                     </div>
                                     <p><?=$post->post_excerpt?$post->post_excerpt:$post->post_content?></p>
                                 </article>

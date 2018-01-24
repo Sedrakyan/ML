@@ -47,7 +47,7 @@ if ( have_posts() ) :
                                     $page = (get_query_var('page') && count(get_posts()) > (int) $postsPerPage) ? (int) get_query_var('page') : 1;
 
                                     if (get_query_var('page') && count(get_posts()) < (int) $postsPerPage) {
-                                        wp_redirect("/blog");
+                                        wp_redirect(get_home_url()."/blog");
                                     }
                                     $postOffset = ( $page - 1 ) * $postsPerPage;
 
@@ -68,7 +68,7 @@ if ( have_posts() ) :
                                                 <h2><a href="<?=$post->guid ?>"><?=$post->post_title?></a></h2>
                                                 <p class="blog-admin"><?=date('d M Y', strtotime($post->post_date))?>
                                                     <a href="<?=$post->guid ?>" class="com-like"><span class="fa fa-comment-o"></span><?=$post->comment_count?> Comments</a>
-                                                    <a  class="com-like"><span class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></span><span class="like-count"><?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></a>
+                                                    <span  class="com-like"><a href="#" class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></a><span class="like-count"> <?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></span>
                                                 </p>
                                             </div>
                                             <p><?= $post->post_excerpt?$post->post_excerpt:$post->post_content ?></p>
@@ -84,14 +84,14 @@ if ( have_posts() ) :
                                         if ( $page > 1) {
                                             ?>
                                             <li>
-                                                <a href="/blog/<?=$page-1?>" aria-label="Previous">
+                                                <a href="<?=get_home_url();?>/blog/<?=$page-1?>" aria-label="Previous">
                                                     <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                                                 </a>
                                             </li>
                                         <?php }
                                         for ($i=1; $i<=$pages; $i++) {
                                             if ( $i == 1 || $i == $pages || ($i >= $page -1 && $i <= $page + 1)) {?>
-                                                <li><a href="<?=$page == $i ? '#' : '/blog/' . ($i)?>"><?=$i?></a></li>
+                                                <li><a href="<?=$page == $i ? '#' : get_home_url().'/blog/' . ($i)?>"><?=$i?></a></li>
                                             <?php } else {
                                                 if ( $i < $page)
                                                     $i = $page -2;
@@ -103,7 +103,7 @@ if ( have_posts() ) :
                                         if ($page < $pages) {
                                             ?>
                                             <li>
-                                                <a href="/blog/<?=$page+1?>" aria-label="Next">
+                                                <a href="<?=get_home_url();?>/blog/<?=$page+1?>" aria-label="Next">
                                                     <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                                 </a>
                                             </li>

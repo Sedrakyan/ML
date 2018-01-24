@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="error-message">
-                        <p><span class="opps_homepage">OOPS</span>, <?=esc_html_e( ' nothing matched your search terms. Please try again with some different keywords.', 'ml' );?> <a href="/">homepage</a></p>
+                        <p><span class="opps_homepage">OOPS</span>, <?=esc_html_e( ' nothing matched your search terms. Please try again with some different keywords.', 'ml' );?> <a href="<?=get_home_url();?>">homepage</a></p>
                     </div>
                 </div>
             </div>

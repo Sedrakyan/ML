@@ -21,7 +21,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="error-message">
-                        <p><span class="opps_homepage">OOPS</span>, page not found,please try again or return to our <a href="/">homepage</a></p>
+                        <p><span class="opps_homepage">OOPS</span>, page not found,please try again or return to our <a href="<?=get_home_url();?>">homepage</a></p>
                     </div>
                 </div>
             </div>

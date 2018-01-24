@@ -18,7 +18,7 @@
                     <div class="blog-banner-area">
                         <h2>Blog Single</h2>
                         <ol class="breadcrumb">
-                            <li><a href="/">Home</a></li>
+                            <li><a href="<?=get_home_url();?>">Home</a></li>
                             <li class="active"><?php
                                 the_title( '', '' );
                                 ?></li>
@@ -39,14 +39,14 @@
                             <div class="blog-left blog-details">
                                 <!-- Start single blog post -->
                                 <article class="single-from-blog black-222">
-                                    <?php if( !$post->post_type == 'newsman_ap') { ?>
+                                    <?php if( $post->post_type !== 'newsman_ap' ) { ?>
                                     <div class="blog-title">
                                         <?php
                                         the_title( '<h2><a href="'.$post->guid.'">', '</a></h2>' );
                                         ?>
                                         <p class="blog-admin"><?=date('d M Y', strtotime($post->post_date))?>
                                             <a href="<?=$post->guid?>" class="com-like"><span class="fa fa-comment-o"></span><?=$post->comment_count?> Comments</a>
-                                            <a  class="com-like"><span class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></span><span class="like-count"><?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></a>
+                                            <span  class="com-like"><a href="#" class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></a><span class="like-count"> <?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></span>
                                         </p>
                                     </div> <?php } ?>
                                     <figure>

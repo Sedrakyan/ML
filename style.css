@@ -312,7 +312,7 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -816,4 +816,12 @@ a.single-service:hover {
 }
 .popular-post-widget .media-left{
 	padding: 0;
+}
+a.fa:hover, a.fa:focus{
+	text-decoration: none;
+	color: #ccc;
+
+}
+.slick-dots li button:before{
+	content: none !important;
 }

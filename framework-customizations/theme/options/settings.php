@@ -17,7 +17,7 @@ $options = array(
                     'logo' => array(
                         'label' => 'Logo',
                         'type' => 'upload',
-                        'desc' => __( 'This is your site logo, showing on the menu area.', 'fw'),
+                        'desc' => __( 'This is your site logo, showing on the menu area. (Recommended size 100x85)', 'fw'),
                     ),
                     'version' => array(
                         'label' => 'Version',
@@ -41,7 +41,7 @@ $options = array(
                             'red' => 'Red',
                             'dark-red' => 'Dark Red',
                             'bridge' => 'Bridge',
-                            'default' => 'Default',
+                            'default' => 'Lite Green',
                             'green' => 'Green',
                             'orange' => 'Orange',
                             'pink' => 'Pink',

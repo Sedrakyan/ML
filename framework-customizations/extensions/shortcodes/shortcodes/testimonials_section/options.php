@@ -4,7 +4,8 @@ if( !defined('FW')) {die('Forbidden');}
 $options=array(
     'bg_image' => array(
         'type' => 'upload',
-        'label' => 'Background Image of this section. Either upload a new, or choose an existing image from your media library'
+        'label' => 'Background Image',
+        'desc' => 'Background Image of this section. Either upload a new, or choose an existing image from your media library. (Recommended size 1920x650)'
     ),
     'testimonials' => array(
         'label'         => __( 'Testimonials', 'fw' ),

@@ -8,7 +8,7 @@
  *
  * @package ml
  */
-
+if (!defined('FW')) die('Forbidden');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

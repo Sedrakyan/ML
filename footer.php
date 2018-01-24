@@ -39,7 +39,7 @@ $copyright = fw_get_db_settings_option('copyright');
     </div>
     <div class="footer-bottom">
         <div>
-            <p>© <?=date('Y', time())?> - <?=$copyright?>  <a href="<?=$link?>"><?=$link_text?></a></p>
+            <p>© <?=date('Y', time())?> <?php if ($copyright || $link_text):?>- <?php endif; echo $copyright?>  <a href="<?=$link?>"><?=$link_text?></a></p>
         </div>
     </div>
 </footer>

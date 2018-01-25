@@ -8,9 +8,9 @@
  *
  * @package ml
  */
-$link = fw_get_db_settings_option('link');
-$link_text = fw_get_db_settings_option('link_text');
-$copyright = fw_get_db_settings_option('copyright');
+$link = defined('FW')?fw_get_db_settings_option('link'):'#';
+$link_text = defined('FW')?fw_get_db_settings_option('link_text'):'';
+$copyright = defined('FW')?fw_get_db_settings_option('copyright'):'';
 ?>
 
 	</div><!-- #content -->
@@ -21,7 +21,7 @@ $copyright = fw_get_db_settings_option('copyright');
                 <div class="col-md-12">
                     <div class="footer-top-area">
                         <div class="footer-social">
-                            <?php
+                            <?php if (defined('FW')):
                             foreach (fw_get_db_settings_option('social_links') as $social) :
                             ?>
                             <a href="<?=$social['link']?>"
@@ -30,6 +30,7 @@ $copyright = fw_get_db_settings_option('copyright');
                                 <span class="<?=$social['icon']?>"></span></a>
                             <?php
                             endforeach;
+                            endif;
                             ?>
                         </div>
                     </div>

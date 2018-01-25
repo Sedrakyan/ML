@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area<?=fw_get_db_settings_option('version') == 'dark'? ' black-222':'' ?>">
+<div id="comments" class="comments-area<?=defined('FW') && fw_get_db_settings_option('version') == 'light'? '':' black-222' ?>">
 
     <?php
     // You can start editing here -- including this comment!

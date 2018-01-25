@@ -42,7 +42,7 @@ if ( have_posts() ) :
                             <div class="col-lg-8 col-md-7 col-sm-12">
                                 <div class="blog-left blog-archive">
                                     <!-- Start single blog post -->
-                                    <?php  $postsPerPage = fw_get_db_settings_option('posts_per_page');
+                                    <?php  $postsPerPage = defined('FW')?fw_get_db_settings_option('posts_per_page'):5;
 
                                     $page = (get_query_var('page') && count(get_posts()) > (int) $postsPerPage) ? (int) get_query_var('page') : 1;
 
@@ -60,7 +60,7 @@ if ( have_posts() ) :
                                     $postlist = get_posts($args);
 
                                     foreach ( $postlist as $post ) :?>
-                                        <article class="single-from-blog<?=fw_get_db_settings_option('version') == 'dark'? ' black-222':'' ?>">
+                                        <article class="single-from-blog<?=defined('FW') && fw_get_db_settings_option('version') == 'light'? '':' black-222' ?>">
                                             <figure>
                                                 <a href="<?=$post->guid ?>"><?= get_the_post_thumbnail($post->ID)?></a>
                                             </figure>

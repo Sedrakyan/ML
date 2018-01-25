@@ -413,7 +413,7 @@ if ( defined('FW') ) {
         public function widget($args, $instance)
         {
             $title = apply_filters('widget_title', $instance['title']);
-            if (fw_get_db_settings_option('instagram_feed')):
+            if (defined('FW') && fw_get_db_settings_option('instagram_feed')):
                 echo $args['before_widget'];
                 if (!empty($title)) {
                     echo $args['before_title'] . $title . $args['after_title'];

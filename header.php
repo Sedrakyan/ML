@@ -8,7 +8,6 @@
  *
  * @package ml
  */
-if (!defined('FW')) die('Forbidden');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -30,7 +29,7 @@ if (!defined('FW')) die('Forbidden');
 <div id="preloader">
     <div class="loader">&nbsp;</div>
 </div>
-<?php if (fw_get_db_settings_option('scroll_to_top') == 'on'):?>
+<?php if (defined('FW') && fw_get_db_settings_option('scroll_to_top') == 'on'):?>
 <a class="scrollToTop" href="#" style="display: none;"><i class="fa fa-angle-double-up"></i></a>
 <?php endif; ?>
 <section id="menu-area">
@@ -46,7 +45,7 @@ if (!defined('FW')) die('Forbidden');
                 </button>
                 <!-- LOGO -->
                 <a class="navbar-brand logo" href="<?php echo get_home_url(); ?>">
-                    <img src="<?=fw_get_db_settings_option('logo') ? fw_get_db_settings_option('logo')['url'] : get_template_directory_uri().'/images/logo.png'?>" alt="logo">
+                    <img src="<?= defined('FW') && fw_get_db_settings_option('logo') ? fw_get_db_settings_option('logo')['url'] : get_template_directory_uri().'/images/logo.png'?>" alt="logo">
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">

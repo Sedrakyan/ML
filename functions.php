@@ -589,12 +589,15 @@ function liked($post_id) {
     $results = $wpdb->get_results("SELECT COUNT(post_id)  FROM {$wpdb->prefix}postmeta WHERE post_id={$post_id} AND meta_key='likes' AND meta_value='".$ip."'", ARRAY_N );
     return (bool) $results[0][0];
 }
-function cut_string($string) {
+function cut_string($string, $lenght=null) {
     $ending = '';
-    if (strlen($string) > 55){
+    if (!$lenght){
+        $lenght = 55;
+    }
+    if (strlen($string) > $lenght){
         $ending = ' ...';
     }
-    $string = substr($string, 0, 55);
+    $string = substr($string, 0, $lenght);
     $pos = strrpos($string, ' ', -1);
     $string = substr($string, 0, $pos).$ending;
     return $string;

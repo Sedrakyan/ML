@@ -811,7 +811,7 @@ ul.comment-list, ul.children {
 a.single-service:hover {
 	text-decoration: none;
 }
-#banner-img-container {
+#banner-img-container, .banner-img-container {
 	width: 100vw !important;
 }
 .popular-post-widget .media-left{
@@ -824,4 +824,12 @@ a.fa:hover, a.fa:focus{
 }
 .slick-dots li button:before{
 	content: none !important;
+}
+article.single-from-blog-little {
+	height: 500px;
+	overflow: hidden;
+}
+article.single-from-blog-little figure{
+	max-height: 240px;
+	overflow: hidden;
 }

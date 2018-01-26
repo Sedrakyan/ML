@@ -48,7 +48,7 @@ $options=array(
     ),
     'image' => array(
         'label' => __('Image', 'unyson'),
-        'desc'  => __( 'Either upload a new, or choose an existing image from your media library', 'fw' ),
+        'desc'  => __( 'Either upload a new, or choose an existing image from your media library. (Recomended size 445x420)', 'fw' ),
         'type' => 'upload'
     )
 )

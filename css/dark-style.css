@@ -1624,7 +1624,7 @@ display: flex;
 	display: inline;
 	float: left;
 	padding: 70px 0;
-	width: 100%;
+	width: 100vw;
 }
 .contact-left {
 	background-color: rgba(104, 102, 96, 0.5);
@@ -3476,4 +3476,3 @@ iframe{
 .from-blog-content .row:not(:first-child){
 	margin-top: 25px;
 }
-.team-grid:first-child

@@ -9,7 +9,9 @@ if( !defined('FW')) {die('Forbidden');}
 $bg_image = !empty($atts['bg_image']) ? $atts['bg_image']['url']: get_template_directory_uri().'/images/testimonial-bg.jpg';
 ?>
 <section id="testimonial">
-    <img src="<?=$bg_image?>" alt="img">
+    <div class="banner-img-container">
+        <img src="<?=$bg_image?>" alt="img">
+    </div>
     <div class="counter-overlay">
         <div class="container">
             <div class="row">

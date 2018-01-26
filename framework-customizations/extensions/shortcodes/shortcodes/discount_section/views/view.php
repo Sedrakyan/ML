@@ -18,7 +18,9 @@ $discount_text = !empty($atts['discount_text'])
 ?>
 <!-- Start call to action -->
 <section id="call-to-action">
-    <img src="<?=$bg_image_url?>" alt="img">
+    <div class="banner-img-container">
+        <img src="<?=$bg_image_url?>" alt="img">
+    </div>
     <div class="call-to-overlay">
         <div class="container">
             <div class="call-to-content wow">

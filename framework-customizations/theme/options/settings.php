@@ -17,7 +17,14 @@ $options = array(
                     'logo' => array(
                         'label' => 'Logo',
                         'type' => 'upload',
+                        'value' => 236, // ToDo get attachment id of image dynamically
                         'desc' => __( 'This is your site logo, showing on the menu area. (Recommended size 100x85)', 'fw'),
+                    ),
+                    'transparant_logo_bg' => array(
+                        'label' => 'Transparant Logo Background',
+                        'type' => 'checkbox',
+                        'desc' => __( "This option allows you to use transparent background for site logo." , 'fw'),
+                        'text'  => __('Yes', 'fw'),
                     ),
                     'version' => array(
                         'label' => 'Version',

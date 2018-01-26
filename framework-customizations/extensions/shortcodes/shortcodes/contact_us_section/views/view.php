@@ -6,10 +6,10 @@ if( !defined('FW')) {die('Forbidden');}
 */
 ?>
 <?php
-$section_title = !empty($atts['section_title']) ? $atts['section_title']: 'Contact us';
-$form_title = !empty($atts['form_title']) ? $atts['form_title']: 'Send a message';
-$name_placeholder = !empty($atts['name_placeholder']) ? $atts['name_placeholder']: 'Name';
-$email_placeholder = !empty($atts['email_placeholder']) ? $atts['email_placeholder']: 'Email';
+$section_title = !empty($atts['section_title']) ? $atts['section_title']: '';
+$form_title = !empty($atts['form_title']) ? $atts['form_title']: '';
+$name_placeholder = !empty($atts['name_placeholder']) ? $atts['name_placeholder']: '';
+$email_placeholder = !empty($atts['email_placeholder']) ? $atts['email_placeholder']: '';
 $send_to = !empty($atts['send_to']) ? $atts['send_to']: '';
 $map = !empty($atts['map']) ? $atts['map']: '';
 $location = '';

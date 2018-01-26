@@ -4,8 +4,8 @@ if( !defined('FW')) {die('Forbidden');}
 $options=array(
     'bg_image' => array(
         'type' => 'upload',
-        'label' => 'Title',
-        'desc' => 'Please choose a background image.'
+        'label' => 'Background Image',
+        'desc' => 'Please choose a background image. (Recomended size 1920x300)'
     ),
     'achievements' => array(
         'label'         => __( 'Achievements', 'fw' ),
@@ -13,6 +13,7 @@ $options=array(
         'desc'          => __( 'Here you can add, remove and edit your Achievements.', 'fw' ),
         'type'          => 'addable-popup',
         'template'      => '{{=title}}',
+        'limit'         => 4,
         'popup-options' => array(
             'icon' => array(
                 'label' => __( 'Achievement Icon', 'fw' ),

@@ -10,7 +10,9 @@ $bg_image =  !empty($atts['bg_image']) ? $atts['bg_image']['url']: get_template_
 
 ?>
 <section id="counter">
-    <img src="<?=$bg_image?>" alt="img">
+    <div class="banner-img-container">
+        <img src="<?=$bg_image?>" alt="img">
+    </div>
     <div class="counter-overlay">
         <div class="container">
             <div class="row">

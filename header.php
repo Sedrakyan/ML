@@ -45,7 +45,10 @@
                 </button>
                 <!-- LOGO -->
                 <a class="navbar-brand logo" href="<?php echo get_home_url(); ?>">
-                    <img src="<?= defined('FW') && fw_get_db_settings_option('logo') ? fw_get_db_settings_option('logo')['url'] : get_template_directory_uri().'/images/logo.png'?>" alt="logo">
+                    <img src="<?= defined('FW') && fw_get_db_settings_option('logo') ? fw_get_db_settings_option('logo')['url'] : get_template_directory_uri().'/images/logo.png'?>"
+                         alt="logo"<?php if(fw_get_db_settings_option('transparant_logo_bg')){
+                             echo 'style="background: transparent !important"';
+                    } ?>>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">

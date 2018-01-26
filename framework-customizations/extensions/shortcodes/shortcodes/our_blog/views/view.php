@@ -41,17 +41,17 @@ if(get_posts()) :
                                     }
                             ?>
                                 <div class="col-md-4">
-                                <article class="single-from-blog">
+                                <article class="single-from-blog single-from-blog-little">
                                     <figure>
                                         <a href="<?= $post->guid ?>"><?php echo get_the_post_thumbnail($post->ID); ?></a>
                                     </figure>
                                     <div class="blog-title">
-                                        <h2><a href="<?=$post->guid?>"><?=$post->post_title?></a></h2>
+                                        <h2><a href="<?=$post->guid?>"><?=cut_string($post->post_title, 40)?></a></h2>
                                         <p class="blog-admin"><?=date('d M Y', strtotime($post->post_date))?>
                                 <a href="<?=$post->guid ?>" class="com-like"><span class="fa fa-comment-o"></span><?=$post->comment_count?>  Comments</a>
                                             <span  class="com-like"><a href="#" class="<?=liked($post->ID)?'fa fa-thumbs-up':'fa fa-thumbs-o-up'?>" data-id="<?=$post->ID?>"></a><span class="like-count"> <?=get_likes_count($post->ID)?> <?=get_likes_count($post->ID)==1?'Like':'Likes'?></span></span>
                                     </div>
-                                    <p><?=$post->post_excerpt?$post->post_excerpt:$post->post_content?></p>
+                                    <p><?=$post->post_excerpt?cut_string($post->post_excerpt, 245):cut_string(strip_tags ($post->post_content), 245)?></p>
                                 </article>
                             </div>
                             <?php

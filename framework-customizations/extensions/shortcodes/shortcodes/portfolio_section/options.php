@@ -21,12 +21,12 @@ $options=array(
         'popup-options' => array(
             'image_small' => array(
                 'label' => __( 'Small Image', 'fw' ),
-                'desc'  => __( 'Please choose the list image.', 'fw' ),
+                'desc'  => __( 'Please choose the list image. (Recomended size 280x290)', 'fw' ),
                 'type'  => 'upload'
             ),
             'image_big' => array(
                 'label' => __( 'Big Image', 'fw' ),
-                'desc'  => __( 'Please choose the preview image.', 'fw' ),
+                'desc'  => __( 'Please choose the preview image. (Recomended size 640x425)', 'fw' ),
                 'type'  => 'upload'
             ),
             'title'  => array(

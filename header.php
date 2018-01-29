@@ -44,12 +44,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- LOGO -->
+	            <?php if (defined('FW') && fw_get_db_settings_option('logo') ):?>
                 <a class="navbar-brand logo" href="<?php echo get_home_url(); ?>">
-                    <img src="<?= defined('FW') && fw_get_db_settings_option('logo') ? fw_get_db_settings_option('logo')['url'] : get_template_directory_uri().'/images/logo.png'?>"
+                    <img src="<?=  fw_get_db_settings_option('logo')['url'] ?>"
                          alt="logo"<?php if(fw_get_db_settings_option('transparant_logo_bg')){
                              echo 'style="background: transparent !important"';
                     } ?>>
                 </a>
+	            <?php endif; ?>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <?php

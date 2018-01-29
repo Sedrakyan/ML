@@ -9,15 +9,9 @@ $options = array(
                 'title' => __('General Settings', 'fw'),
                 'type'  => 'box',
                 'options' => array(
-                    'favicon' => array(
-                        'label' => 'Favicon',
-                        'type' => 'upload',
-                        'desc' => __( 'This is your site favicon.', 'fw'),
-                    ),
                     'logo' => array(
                         'label' => 'Logo',
                         'type' => 'upload',
-                        'value' => 236, // ToDo get attachment id of image dynamically
                         'desc' => __( 'This is your site logo, showing on the menu area. (Recommended size 100x85)', 'fw'),
                     ),
                     'transparant_logo_bg' => array(

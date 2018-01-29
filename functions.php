@@ -628,4 +628,27 @@ function ml_comment($comment, $args, $depth) {
 
 /*****************************************/
 
+/*Customize the default customize*/
+
+add_action( "customize_register", "ml_theme_customize_register" );
+function ml_theme_customize_register( $wp_customize ) {
+
+	//=============================================================
+	// Remove header image and widgets option from theme customizer
+	//=============================================================
+	$wp_customize->remove_control("header_image");
+	$wp_customize->remove_panel("widgets");
+
+	//=============================================================
+	// Remove Colors, Background image, Custom CSS, Custom Logo and Static front page
+	// option from theme customizer
+	//=============================================================
+	$wp_customize->remove_section("colors");
+	$wp_customize->remove_section("background_image");
+	$wp_customize->remove_section("static_front_page");
+	$wp_customize->remove_section("custom_css");
+	$wp_customize->remove_control("custom_logo");
+
+}
 ?>
+

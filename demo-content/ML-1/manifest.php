@@ -4,6 +4,6 @@
  */
 
 $manifest = array();
-$manifest['title'] = __('ML Landing Demo 1', 'fw');
+$manifest['title'] = __('ML Landing Demo', 'fw');
 $manifest['screenshot'] = $uri . '/screenshot.png';
 $manifest['preview_link'] = 'http://vazgen.byethost6.com';

@@ -833,3 +833,14 @@ article.single-from-blog-little figure{
 	max-height: 240px;
 	overflow: hidden;
 }
+.background-video{
+	width: 100vw !important;
+	height: calc(100vh - 100px) !important;
+}
+
+.bx-viewport {
+	border: 0px !important;
+}
+.bx-viewport img{
+	height: calc(100vh - 100px) !important;
+}

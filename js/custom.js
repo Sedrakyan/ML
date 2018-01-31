@@ -405,6 +405,6 @@ $('#search').on('blur', function (e) {
         $('#header-search').submit();
     }
 });
-if (!document.getElementById('about')){
+if (!document.getElementById('about') && document.getElementsByClassName('header-btn-area').length > 0){
     document.getElementsByClassName('header-btn-area')[0].style.display='none';
 }

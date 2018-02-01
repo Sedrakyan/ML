@@ -12,6 +12,7 @@
 	9. MOBILE MENU CLOSE 
 	10. PRELOADER 
 	11. INSTAGRAM SLIDER (SLICK SLIDER)
+ 		11.1. HOME SLIDER (SLICK SLIDER)
 	12. WOW ANIMATION 	
 	13. CUSTOM EVENTS
 	
@@ -19,7 +20,21 @@
 
 jQuery(function($){
 
+    /* ----------------------------------------------------------- */
+    /*  0. HOME SLIDER (SLICK SLIDER)
+    /* ----------------------------------------------------------- */
 
+    jQuery('.home-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        arrows:false,
+        autoplay: true,
+        slidesToShow: 1,
+        slide: 'div',
+        fade: true,
+        cssEase: 'linear'
+    });
 	/* ----------------------------------------------------------- */
 	/*  1. HEADER CONTENT SLIDE (SLICK SLIDER)
 	/* ----------------------------------------------------------- */
@@ -255,7 +270,7 @@ jQuery(function($){
             $('body').delay(100).css({'overflow':'visible'});
         });
 
-        /* ----------------------------------------------------------- */
+	/* ----------------------------------------------------------- */
 	/*  11. INSTAGRAM SLIDER (SLICK SLIDER)
 	/* ----------------------------------------------------------- */ 
 
@@ -269,6 +284,7 @@ jQuery(function($){
 		slide: 'div',		
 		cssEase: 'linear'
 	});
+
 
 	/* ----------------------------------------------------------- */
 	/*  12. WOW ANIMATION

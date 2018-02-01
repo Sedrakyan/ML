@@ -844,3 +844,22 @@ article.single-from-blog-little figure{
 .bx-viewport img{
 	height: calc(100vh - 100px) !important;
 }
+.home-slider{
+	float: left;
+	width: 100%;
+}
+.home-slider.slick-slider{
+	margin-bottom: 0 !important;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 50%; /* 16:9 */
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: calc(100vw/1.77);
+}

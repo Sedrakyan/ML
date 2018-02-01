@@ -25,7 +25,6 @@ $options = array(
                         'type' => 'select',
                         'desc' => __( 'Theme has 2 versions, dark and light, you can choose between theme here.', 'fw'),
                         'value' => 'dark',
-                        'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
                         'choices' => array(
                             'dark' => 'Dark',
                             'light' => 'Light'
@@ -36,7 +35,6 @@ $options = array(
                         'type' => 'select',
                         'desc' => __( 'Theme has several color versions, that you can change. Just one choice and it will do the magic.', 'fw'),
                         'value' => 'lite-blue',
-                        'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
                         'choices' => array(
                             'lite-blue' => 'Lite Blue',
                             'red' => 'Red',
@@ -49,6 +47,18 @@ $options = array(
                             'purple' => 'Purple',
                             'yellow' => 'Yellow',
                         )
+                    ),
+
+                    'homepage_version' => array(
+	                    'label' => 'Homepage Version',
+	                    'type' => 'select',
+	                    'desc' => __( 'Change the version of homepage main section.', 'fw'),
+	                    'value' => 'image',
+	                    'choices' => array(
+		                    'image' => 'Image',
+		                    'slide' => 'Slide',
+		                    'video' => 'Video'
+	                    )
                     ),
                     'posts_per_page' => array(
                         'label' => 'Posts Per Page',

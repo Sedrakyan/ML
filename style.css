@@ -863,3 +863,6 @@ article.single-from-blog-little figure{
 	width: 100vw;
 	height: calc(100vw/1.77);
 }
+footer {
+	position: relative;
+}

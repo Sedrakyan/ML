@@ -12,7 +12,11 @@ $options = array(
                     'logo' => array(
                         'label' => 'Logo',
                         'type' => 'upload',
-                        'desc' => __( 'This is your site logo, showing on the menu area. (Recommended size 100x85)', 'fw'),
+                        'value' => array(
+                        	'url' => get_template_directory_uri().'/images/logo.png',
+                        	'image_url' => get_template_directory_uri().'/images/logo.png',
+                        ),
+                        'desc' => __( 'This is your site logo, showing on the menu area. It will replace default logo. (Recommended size 100x85)', 'fw'),
                     ),
                     'transparant_logo_bg' => array(
                         'label' => 'Transparant Logo Background',
@@ -116,6 +120,38 @@ $options = array(
                         'type'          => 'addable-popup',
                         'desc' => __( 'This part is responsible for footer social links. You can add one above, choose icon for it and set link.', 'fw'),
                         'template'      => '{{=name}}',
+                        'value' => array(
+                        	array(
+                        		'name' => 'Google+',
+		                        'icon' => 'fa fa-google-plus',
+		                        'link' => '#',
+		                        'color' => '#dd4b39'
+	                        ),
+                        	array(
+                        		'name' => 'Youtube',
+		                        'icon' => 'fa fa-youtube',
+		                        'link' => '#',
+		                        'color' => '#bb0000'
+	                        ),
+                        	array(
+                        		'name' => 'Facebook',
+		                        'icon' => 'fa fa-facebook',
+		                        'link' => '#',
+		                        'color' => '#3b5998'
+	                        ),
+                        	array(
+                        		'name' => 'Twitter',
+		                        'icon' => 'fa fa-twitter',
+		                        'link' => '#',
+		                        'color' => '#00aced'
+	                        ),
+                        	array(
+                        		'name' => 'LinkedIn',
+		                        'icon' => 'fa fa-linkedin',
+		                        'link' => '#',
+		                        'color' => '#007bb5'
+	                        ),
+                        ),
                         'popup-options' => array(
                             'name' => array(
                                 'type' => 'text',
@@ -144,16 +180,19 @@ $options = array(
                         'type' => 'text',
                         'desc' => __( 'This part is for footer copyright text.', 'fw'),
                         'label' => 'Copyright Text',
+	                    'value' => 'All Right Reserved.'
                     ),
                     'link' => array(
                         'type' => 'text',
                         'desc' => __( 'This part is for footer link showing next to social links.', 'fw'),
-                        'label' => 'Footer Link'
+                        'label' => 'Footer Link',
+	                    'value' => '#'
                     ),
                     'link_text' => array(
                         'type' => 'text',
                         'desc' => __( 'You can write footer link text showing next to social links.', 'fw'),
-                        'label' => 'Footer Link Text'
+                        'label' => 'Footer Link Text',
+	                    'value' => 'LifeInSYS'
                     )
                 ),
             ),

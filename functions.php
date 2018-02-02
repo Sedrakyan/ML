@@ -651,4 +651,3 @@ function ml_theme_customize_register( $wp_customize ) {
 
 }
 ?>
-

@@ -12,10 +12,6 @@ $options = array(
                     'logo' => array(
                         'label' => 'Logo',
                         'type' => 'upload',
-                        'value' => array(
-                        	'url' => get_template_directory_uri().'/images/logo.png',
-                        	'image_url' => get_template_directory_uri().'/images/logo.png',
-                        ),
                         'desc' => __( 'This is your site logo, showing on the menu area. It will replace default logo. (Recommended size 100x85)', 'fw'),
                     ),
                     'transparant_logo_bg' => array(

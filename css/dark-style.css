@@ -1720,6 +1720,7 @@ display: flex;
 	display: none;
 	float: left;	
 	width: 100%;
+	margin-bottom: -6px;
 }
 iframe{
     border: 0;
@@ -1750,7 +1751,6 @@ iframe{
 	background-color: #222;
 	display: inline;
 	float: left;
-	margin-top: -6px;
 	width: 100%;
 }
 .footer-top {

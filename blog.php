@@ -14,7 +14,7 @@ get_header();
 if ( have_posts() ) :
     ?>
     <section id="blog-banner">
-        <div id="banner-img-container">
+        <div class="banner-img-container">
             <?= get_the_post_thumbnail($post)? get_the_post_thumbnail() : '<img src="'.get_template_directory_uri().'/images/blog_bg.jpg" alt="img">' ; ?>
         </div>
         <div class="blog-overlay">

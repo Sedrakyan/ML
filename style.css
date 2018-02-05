@@ -811,7 +811,7 @@ ul.comment-list, ul.children {
 a.single-service:hover {
 	text-decoration: none;
 }
-#banner-img-container, .banner-img-container {
+.banner-img-container {
 	width: 100vw !important;
 }
 .popular-post-widget .media-left{
@@ -865,4 +865,11 @@ article.single-from-blog-little figure{
 }
 footer {
 	position: relative;
+}
+.single-from-blog .blog-title {
+	position: relative;
+	z-index: 1;
+}
+.banner-img-container{
+	min-width: 1920px !important;
 }

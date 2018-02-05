@@ -8,7 +8,7 @@
  */
 ?>
 <section id="blog-banner">
-    <div id="banner-img-container">
+    <div class="banner-img-container">
         <img src="<?=fw_get_db_post_option($post->ID, 'bg_image') ? fw_get_db_post_option($post->ID, 'bg_image')['url'] : get_template_directory_uri().'/images/blog_bg.jpg'?>" alt="img">
     </div>
     <div class="blog-overlay">

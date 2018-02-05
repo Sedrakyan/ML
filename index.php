@@ -76,7 +76,7 @@ get_header(); ?>
                                                     if (get_query_var('page') && count(get_posts()) < (int) $postsPerPage) {
                                                         wp_redirect("/blog");
                                                     }
-                                                    //var_dump($page);die;
+
                                                     $postOffset = ( $page - 1 ) * $postsPerPage;
 
                                                     $args = array(

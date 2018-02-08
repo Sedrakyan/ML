@@ -136,13 +136,22 @@ function ml_scripts() {
     wp_enqueue_script( 'ml-wow', get_template_directory_uri() . '/js/wow.js', array(), '', true );
     wp_enqueue_script( 'ml-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
     wp_enqueue_script( 'ml-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    if(defined('FW')){
+        $dataToBePassed = fw_get_db_settings_option('slide_delay') ? fw_get_db_settings_option('slide_delay') : 300;
+    }
     wp_enqueue_script( 'ml-custom', get_template_directory_uri() . '/js/custom.js', array(), '', true );
+    wp_localize_script( 'ml-fw-custom', 'fw_slide_delay', $dataToBePassed );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ml_scripts' );
+add_action('fw_init', '_action_theme_fw_init');
+function _action_theme_fw_init() {
+    wp_enqueue_script( 'ml-fw-custom', get_template_directory_uri() . '/js/fw.js', array(), '', true );
+}
+
 
 /**
  * Implement the Custom Header feature.
@@ -331,7 +340,7 @@ if ( defined('FW') ) {
         {
             $title = apply_filters('widget_title', $instance['title']);
             $empty = true;
-            foreach (get_posts() as $post) :
+            foreach (get_posts((array('nopaging' => true))) as $post) :
                 if (fw_get_db_post_option($post->ID, 'popular')) :
                     $empty = false;
                     break;
@@ -592,5 +601,11 @@ function ml_theme_customize_register( $wp_customize ) {
 	$wp_customize->remove_section("custom_css");
 	$wp_customize->remove_control("custom_logo");
 
+}
+function checkMultidimentionalArrayKey($array, $key) {
+    foreach ($array as $item)
+        if (!empty($item[$key]))
+            return true;
+    return false;
 }
 ?>

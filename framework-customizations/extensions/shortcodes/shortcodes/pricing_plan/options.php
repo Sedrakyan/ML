@@ -28,6 +28,7 @@ $options=array(
                 'label' => __( 'Plan Price', 'fw' ),
                 'desc'  => __( 'Please enter the price for this plan.', 'fw' ),
                 'type'  => 'number',
+                'attr' => array('min' => 0, 'step' => 0.01)
             ),
             'currency'   => array(
                 'label' => __( 'Currency', 'fw' ),

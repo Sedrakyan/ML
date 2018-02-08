@@ -23,7 +23,7 @@ $copyright = defined('FW')?fw_get_db_settings_option('copyright'):'';
                         <div class="footer-social">
                             <?php if (defined('FW')):
                             foreach (fw_get_db_settings_option('social_links') as $social) :
-                            ?>
+                                ?>
                             <a href="<?=$social['link']?>"
                                onmouseover="this.style.background='<?=$social['color']?>';this.style.border='<?=$social['color']?> 1px solid';this.style.color='#fff'"
                                onmouseout="this.removeAttribute('style')">
@@ -49,6 +49,7 @@ $copyright = defined('FW')?fw_get_db_settings_option('copyright'):'';
     var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 </script>
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

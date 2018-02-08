@@ -11,6 +11,7 @@
  *
  * @package ml
  */
+die('as');
 get_header(); ?>
 
     <div id="primary" class="content-area">
@@ -70,6 +71,7 @@ get_header(); ?>
                                                 <div class="blog-left blog-archive">
                                                     <!-- Start single blog post -->
                                                     <?php  $postsPerPage = defined('FW')?fw_get_db_settings_option('posts_per_page'):5;
+                                                    var_dump(count(get_posts()));die;
 
                                                     $page = (get_query_var('page') && count(get_posts()) > (int) $postsPerPage) ? (int) get_query_var('page') : 1;
 

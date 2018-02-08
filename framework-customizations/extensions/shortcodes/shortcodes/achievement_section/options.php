@@ -30,6 +30,7 @@ $options=array(
                 'label' => __( 'Count', 'fw' ),
                 'type'  => 'number',
                 'desc'  => __( 'Please write the count number.', 'fw' ),
+                'attr' => array('min' => 0, 'step' => 1)
             ),
         )
     ),

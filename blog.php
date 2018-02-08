@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 /**
  * The template for displaying blog pages
@@ -43,10 +44,9 @@ if ( have_posts() ) :
                                 <div class="blog-left blog-archive">
                                     <!-- Start single blog post -->
                                     <?php  $postsPerPage = defined('FW')?fw_get_db_settings_option('posts_per_page'):5;
+                                    $page = (get_query_var('page') && count(get_posts(array('nopaging' => true))) > (int) $postsPerPage) ? (int) get_query_var('page') : 1;
 
-                                    $page = (get_query_var('page') && count(get_posts()) > (int) $postsPerPage) ? (int) get_query_var('page') : 1;
-
-                                    if (get_query_var('page') && count(get_posts()) < (int) $postsPerPage) {
+                                    if (get_query_var('page') && count(get_posts(array('nopaging' => true))) < (int) $postsPerPage) {
                                         wp_redirect(get_home_url()."/blog");
                                     }
                                     $postOffset = ( $page - 1 ) * $postsPerPage;
@@ -76,8 +76,8 @@ if ( have_posts() ) :
 
                                     <?php
                                     endforeach;
-                                    if (count(get_posts()) > $postsPerPage) {
-                                        $pages = (int) ceil(count(get_posts())/$postsPerPage);?>
+                                    if (count(get_posts(array('nopaging' => true))) > $postsPerPage) {
+                                        $pages = (int) ceil(count(get_posts(array('nopaging' => true)))/$postsPerPage);?>
                                         <nav>
                                         <ul class="pagination blog-pagination">
                                         <?php

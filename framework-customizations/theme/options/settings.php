@@ -1,5 +1,7 @@
 <?php
 if( !defined('FW')) {die('Forbidden');}
+fw_get_db_settings_option('homepage_version') != 'slide' ? $slide_delay_class = 'hidden slide_delay_box' : $slide_delay_class = 'slide_delay_box';
+fw_get_db_settings_option('homepage_version') != 'video' ? $class = 'hidden video_options_box' : $class = 'video_options_box';
 $options = array(
     'general' => array(
         'title' => __('General', 'fw'),
@@ -48,7 +50,6 @@ $options = array(
                             'yellow' => 'Yellow',
                         )
                     ),
-
                     'homepage_version' => array(
 	                    'label' => 'Homepage Version',
 	                    'type' => 'select',
@@ -58,11 +59,46 @@ $options = array(
 		                    'image' => 'Image',
 		                    'slide' => 'Slide',
 		                    'video' => 'Video'
-	                    )
+	                    ),
+                        'attr' => array('class' => 'homepage_version')
+                    ),
+                    'slide_delay_box' => array(
+                        'type'  => 'box',
+                        'attr'  => array( 'class' => $slide_delay_class),
+                        'options' => array(
+                            'slide_delay' => array(
+                                'label' => 'Slide Delay',
+                                'type' => 'number',
+                                'attr' => array('min' => 100, 'step' => 100),
+                                'desc' => __( 'Please write the interval of slides to change(1 second = 100, default is 300).', 'fw'),
+                                'value' => 300,
+                                )
+
+                        )
+                    ),
+                    'video_options_box' => array(
+                        'type'  => 'box',
+                        'attr'  => array( 'class' => $class),
+                        'options' => array(
+                            'video_loop' => array(
+                                'type'  => 'checkbox',
+                                'value' => true,
+                                'label' => __('Video Auto Repeat', '{domain}'),
+                                'desc'  => __('Checking this will cause the player to play the initial video again and again.', 'fw')
+                                ),
+                            'video_mute' => array(
+                                'type'  => 'checkbox',
+                                'value' => true,
+                                'label' => __('Video Sound', '{domain}'),
+                                'desc'  => __('Checking this will cause the video sound be muted.', 'fw')
+                                )
+
+                        )
                     ),
                     'posts_per_page' => array(
                         'label' => 'Posts Per Page',
                         'type' => 'number',
+                        'attr' => array('min' => 1, 'step' => 1),
                         'desc' => __( 'This is for blog pagination (for example on search, blog list page). Default is 5 posts per page.', 'fw'),
                         'value' => 5,
                     ),

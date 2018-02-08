@@ -27,8 +27,8 @@ jQuery(function($){
     jQuery('.home-slider').slick({
         dots: false,
         infinite: true,
-        speed: 500,
-        arrows:false,
+        speed: parseInt(fw_slide_delay),
+        arrows:true,
         autoplay: true,
         slidesToShow: 1,
         slide: 'div',

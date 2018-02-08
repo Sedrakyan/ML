@@ -62,7 +62,7 @@ $option['attr']['class']
 );
 
 $html  = '<div '. fw_attr_to_html($wrapper_attr) .'>';
-$html .= '<input '. fw_attr_to_html($option['attr']) .' type="number" />';
+$html .= '<input '. fw_attr_to_html($option['attr']) .' type="number"/>';
 $html .= '</div>';
 
 return $html;

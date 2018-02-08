@@ -10,9 +10,9 @@ $title = !empty($atts['section_title']) ? $atts['section_title']: 'Our blog';
 $content = !empty($atts['content'])
     ? $atts['content']
     : '';
-if(get_posts()) :
+if(get_posts(array('nopaging' => true))) :
     $empty = true ;
-    foreach ( get_posts() as $post ) :
+    foreach ( get_posts(array('nopaging' => true)) as $post ) :
         if (fw_get_db_post_option($post->ID, 'show_in_main_page')) :
             $empty = false;
             break;

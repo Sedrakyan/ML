@@ -19,6 +19,21 @@ switch (fw_get_db_settings_option('homepage_version')) {
 								'desc'  => __( 'Choose image for slider', 'fw' ),
 								'type'  => 'upload',
 							),
+                            'text_1' => array(
+                                'label' => __( 'Text 1', 'fw' ),
+                                'desc'  => __( 'This is the first row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_2' => array(
+                                'label' => __( 'Text 2', 'fw' ),
+                                'desc'  => __( 'This is the second row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_3' => array(
+                                'label' => __( 'Text 3', 'fw' ),
+                                'desc'  => __( 'This is the third row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            )
 						)
 					),
 				),
@@ -32,6 +47,30 @@ switch (fw_get_db_settings_option('homepage_version')) {
 						'value' => 'https://youtube.com/embed/iGpuQ0ioPrM',
 						'label' => __('Background Video', 'unyson'),
 					),
+                    'video_first_row' => array(
+                        'type' => 'text',
+                        'desc'  => __( 'Please fill the first row text field.', 'fw' ),
+                        'label' => __('First', 'unyson'),
+                    ),
+                    'video_slides' => array(
+                        'label'         => __( 'Text Slides', 'fw' ),
+                        'popup-title'   => __( 'Add/Edit Slides', 'fw' ),
+                        'desc'          => __( 'Here you can add texts to slide.', 'fw' ),
+                        'type'          => 'addable-popup',
+                        'template'      => '{{=content}}',
+                        'popup-options' => array(
+                            'content'       => array(
+                                'label' => __( 'Text', 'fw' ),
+                                'desc'  => __( 'Enter the text', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                        )
+                    ),
+                    'video_last_row' => array(
+                        'type' => 'text',
+                        'desc'  => __( 'Please fill the last row text field.', 'fw' ),
+                        'label' => __('Last', 'unyson'),
+                    ),
 				),
 				'attr' => array('class' => 'hidden')
 			),
@@ -90,6 +129,21 @@ switch (fw_get_db_settings_option('homepage_version')) {
 								'desc'  => __( 'Choose image for slider', 'fw' ),
 								'type'  => 'upload',
 							),
+                            'text_1' => array(
+                                'label' => __( 'Text 1', 'fw' ),
+                                'desc'  => __( 'This is the first row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_2' => array(
+                                'label' => __( 'Text 2', 'fw' ),
+                                'desc'  => __( 'This is the second row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_3' => array(
+                                'label' => __( 'Text 3', 'fw' ),
+                                'desc'  => __( 'This is the third row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            )
 						)
 					),
 				),
@@ -104,6 +158,30 @@ switch (fw_get_db_settings_option('homepage_version')) {
 						'value' => 'https://youtube.com/embed/iGpuQ0ioPrM',
 						'label' => __('Background Video', 'unyson'),
 					),
+                    'video_first_row' => array(
+                        'type' => 'text',
+                        'desc'  => __( 'Please fill the first row text field.', 'fw' ),
+                        'label' => __('First', 'unyson'),
+                    ),
+                    'video_slides' => array(
+                        'label'         => __( 'Text Slides', 'fw' ),
+                        'popup-title'   => __( 'Add/Edit Slides', 'fw' ),
+                        'desc'          => __( 'Here you can add texts to slide.', 'fw' ),
+                        'type'          => 'addable-popup',
+                        'template'      => '{{=content}}',
+                        'popup-options' => array(
+                            'content'       => array(
+                                'label' => __( 'Text', 'fw' ),
+                                'desc'  => __( 'Enter the text', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                        )
+                    ),
+                    'video_last_row' => array(
+                        'type' => 'text',
+                        'desc'  => __( 'Please fill the last row text field.', 'fw' ),
+                        'label' => __('Last', 'unyson'),
+                    ),
 				),
 			),
 			'image_box' => array(
@@ -161,6 +239,22 @@ switch (fw_get_db_settings_option('homepage_version')) {
 							'label' => __( 'Image', 'fw' ),
 							'desc'  => __( 'Choose image for slider', 'fw' ),
 							'type'  => 'upload',
+
+                            'text_1' => array(
+                                'label' => __( 'Text 1', 'fw' ),
+                                'desc'  => __( 'This is the first row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_2' => array(
+                                'label' => __( 'Text 2', 'fw' ),
+                                'desc'  => __( 'This is the second row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            ),
+                            'text_3' => array(
+                                'label' => __( 'Text 3', 'fw' ),
+                                'desc'  => __( 'This is the third row of text showing on the image', 'fw' ),
+                                'type'  => 'text',
+                            )
 						),
 					)
 				),
@@ -176,6 +270,30 @@ switch (fw_get_db_settings_option('homepage_version')) {
 					'value' => 'https://youtube.com/embed/iGpuQ0ioPrM',
 					'label' => __('Background Video', 'unyson'),
 				),
+                'video_first_row' => array(
+                    'type' => 'text',
+                    'desc'  => __( 'Please fill the first row text field.', 'fw' ),
+                    'label' => __('First', 'unyson'),
+                ),
+                'video_slides' => array(
+                    'label'         => __( 'Text Slides', 'fw' ),
+                    'popup-title'   => __( 'Add/Edit Slides', 'fw' ),
+                    'desc'          => __( 'Here you can add texts to slide.', 'fw' ),
+                    'type'          => 'addable-popup',
+                    'template'      => '{{=content}}',
+                    'popup-options' => array(
+                        'content'       => array(
+                            'label' => __( 'Text', 'fw' ),
+                            'desc'  => __( 'Enter the text', 'fw' ),
+                            'type'  => 'text',
+                        ),
+                    )
+                ),
+                'video_last_row' => array(
+                    'type' => 'text',
+                    'desc'  => __( 'Please fill the last row text field.', 'fw' ),
+                    'label' => __('Last', 'unyson'),
+                ),
 			),
 			'attr' => array('class' => 'hidden')
 		),
